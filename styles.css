@@ -12,6 +12,22 @@
     src: url(fonts/ComicNeue-Bold.ttf);
 }
 
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: 3vw;
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+    font-size: 2vw;
+}
+
+button{
+    font-size: 5vw;
+}
+
 body{
     font-family: comic;
 
@@ -36,7 +52,7 @@ nav ul li{
 
 label.logo{
     color: white;
-    font-size: 35px;
+    font-size: 3vw;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
@@ -84,8 +100,11 @@ li a.active,li a:hover{
   }
 
   @media (max-width: 858px){
-    
-    .checkbtn{
+    .button span{
+        font-size: 20px;
+        padding: 1px;
+    }
+     .checkbtn{
         display: block;
       }
       ul{
@@ -101,7 +120,7 @@ li a.active,li a:hover{
       }
       nav ul li{
         display: block;
-        margin: 50px 0;
+        margin: 20px 0;
         line-height: 30px;
       }
       nav ul li a{
@@ -113,8 +132,23 @@ li a.active,li a:hover{
       }
       #check:checked ~ ul{
         left: 0;
-      }
+      } 
   }
+
+  @media (max-width: 377px){
+    .logo a{
+        font-size: 20px;
+        margin: -10%;
+    }
+  }
+  @media (max-width: 271px){
+    .logo a{
+        font-size: 10px;
+        margin: -10%;
+    }
+  }
+
+  
 
 .parent{
     width: 100%;
@@ -248,4 +282,52 @@ input[type="submit"]:hover, button:hover {
 
 .submit{
     text-transform: uppercase;
+}
+
+.form{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0, .3);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    border: solid 4px green;
+    color: green;
+}
+
+.input::placeholder{
+    color: lightgray;
+    font-family: comic;
+}
+
+.btn{
+    background-color: green;
+    color: white;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-family: comic;
+    margin:20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.btn:hover{
+    filter: brightness(0.9);
+}
+
+.score{
+    color: green;
+    text-align: right;
 }
