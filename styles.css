@@ -4,11 +4,16 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: cursive;
+    font-family: comic;
+}
+
+@font-face{
+    font-family: comic; 
+    src: url(fonts/ComicNeue-Bold.ttf);
 }
 
 body{
-    font-family: cursive;
+    font-family: comic;
 
 }
 
