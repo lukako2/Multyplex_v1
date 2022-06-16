@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body{
+    font-family: cursive;
+
+}
+
+nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul li a{
+    cursor: pointer;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: .2s;
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+li a.active,li a:hover{
+    background: #1b9bff;
+    transition: .2s;
+
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+
+}
+
+@media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 858px){
+    
+    .checkbtn{
+        display: block;
+      }
+      ul{
+        z-index: 3;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+      }
+      nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+      }
+      nav ul li a{
+        font-size: 20px;
+      }
+      a:hover,a.active{
+        background: none;
+        color: #0082e6;
+      }
+      #check:checked ~ ul{
+        left: 0;
+      }
+  }
+
+.parent{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+a{
+    color: white;
+}
+
+.container{
+    place-items: center;
+    animation: transitionIn .75s;
+    margin-top: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-self: center;
+    width: 80%;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+}
+
+.button {
+    font-size: 30px;
+    background: white;
+    border: 1px solid #a5b1c2;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #111111;
+    display: inline-block;
+    margin: 1rem auto;
+    min-width: 180px;
+    overflow: hidden;
+    padding: 20px 40px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s ease-in-out all;
+}
+.button span {
+    position: relative;
+    z-index: 2;
+}
+
+.button:before {
+    background: linear-gradient(transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+    content:'';
+    height: 200%;
+    position: absolute;
+    right: calc(100% + 20px);
+    top: -55%;
+    transform: rotate(-70deg);
+    transition: .6s ease-in-out right;
+    width: 80px;
+    z-index: 0;
+}
+
+.button:hover:before {
+    right: -100%;
+}
+
+.button:hover, button:focus {
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1), inset 0 10px 30px rgba(255,255,255,0.3), inset 0 2px 2px rgba(255,255,255,0.2);
+    color: white;
+}
+
+.button.orange:hover, button.orange:focus { 
+    background: #ff793f; border-color: #ff793f; 
+}
+
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        
+
+    }
+
+    to{
+        opacity: 1;
+        
+
+    }
+}
+
+
+h2{
+    margin: 0;
+    color: #5959ff;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+
+form{
+  width: 50%;
+}
+
+form label{
+  float: left;
+  font-size: 1.2rem;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  font-size: 1.2rem;
+}
+input[type="text"], input[type="email"], textarea {
+  margin: 0 0 1em;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+textarea {
+  height: 6em;
+}
+input[type="submit"], button {
+  background: #4570F3;
+  color: #fff;
+  cursor: pointer;
+}
+input[type="submit"]:hover, button:hover {
+  background: #6E65F4;
+}
+
+.submit{
+    text-transform: uppercase;
+}
