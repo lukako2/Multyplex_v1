@@ -24,6 +24,12 @@ const correctAns = num1 * num2;
 
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
+  const num1 = Math.ceil(Math.random() * 10);
+  const num2 = Math.ceil(Math.random() * 10);
+
+  scoreEl.innerText = `score: ${score}`;
+
+  questionEl.innerText = `What is ${num1} multiplied by ${num2}?`;
   const userAns = +inputEl.value;
   if (userAns === correctAns) {
     score++;
