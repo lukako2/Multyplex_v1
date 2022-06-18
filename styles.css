@@ -331,3 +331,16 @@ input[type="submit"]:hover, button:hover {
     color: green;
     text-align: right;
 }
+
+.parent{
+    z-index: 1;
+    filter: blur(0px);
+}
+
+.loading-text{
+    top: 30%;
+    position: absolute;
+    z-index: -1;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
