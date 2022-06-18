@@ -15,9 +15,10 @@ if (!score) {
   score = 0;
 }
 
+
 scoreEl.innerText = `score: ${score}`;
 
-questionEl.innerText = `What is ${num1} multiply by ${num2}?`;
+questionEl.innerText = `What is ${num1} multiplied by ${num2}?`;
 
 const correctAns = num1 * num2;
 
@@ -34,4 +35,28 @@ formEl.addEventListener("submit", () => {
 
 function updateLocalStorage() {
   localStorage.setItem("score", JSON.stringify(score));
+}
+
+const loadingText = document.querySelector('.loading-text');
+const bg = document.querySelector('.form');
+
+
+var load = 0;
+var int = setInterval(blurring, 30)
+function blurring () {
+    load++;
+    if(load> 99){
+        clearInterval(int);
+    }
+    
+    loadingText.innerHTML= `${load}%`;
+    loadingText.style.opacity=scale(load, 0, 100, 1, 0);
+    bg.style.filter = `blur(${scale(load, 0, 100, 20, 0)}px)`
+    setTimeout(function(){
+      bg.style.zIndex = 1;
+    }, 3000);
+}
+
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
