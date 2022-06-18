@@ -22,7 +22,8 @@ questionEl.innerText = `What is ${num1} multiplied by ${num2}?`;
 
 const correctAns = num1 * num2;
 
-formEl.addEventListener("submit", () => {
+formEl.addEventListener("submit", (e) => {
+  e.preventDefault();
   const userAns = +inputEl.value;
   if (userAns === correctAns) {
     score++;
